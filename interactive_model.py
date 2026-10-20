@@ -64,6 +64,6 @@ new_person = pd.DataFrame([{
 }])
 y_pred =  pl.predict(new_person)
 if y_pred == 0:
-    print('No Risk')
+    print('No Risk of CRC')
 else:
-    print('At Risk')
+    print('At Risk of CRC')
