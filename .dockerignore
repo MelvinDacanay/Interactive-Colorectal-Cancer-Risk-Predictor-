@@ -1,0 +1,12 @@
+.gitignore
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.git/
+.env
+data/
+test_app.py
+train_model.py
+README.txt
+

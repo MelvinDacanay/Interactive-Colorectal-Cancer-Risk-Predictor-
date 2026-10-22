@@ -1,14 +1,10 @@
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.pipeline import make_pipeline
 from sklearn.compose import ColumnTransformer
-from sklearn.model_selection import GridSearchCV, train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
 ohe = OneHotEncoder()
 scaler = StandardScaler()
@@ -23,7 +19,7 @@ transformer = ColumnTransformer(transformers=[
 
 pl = make_pipeline(transformer, estimator)
 
-df = pd.read_csv('clean.csv')
+df = pd.read_csv('data/clean.csv')
 X = df.iloc[:,0:13]
 y = df.iloc[:,13]
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42, test_size=0.2)
